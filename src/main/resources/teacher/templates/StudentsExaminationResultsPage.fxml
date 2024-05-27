@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<VBox prefHeight="500" prefWidth="800" xmlns="http://javafx.com/javafx/8"
+  fx:id="studentExamResultsPage"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.mdemydovych.nadiya.desktop.teacher.controller.StudentsExaminationResultsPageController">
+  <children>
+    <TextField fx:id="searchField" promptText="Search..."/>
+    <TableView fx:id="studentExamResultsTable" prefHeight="${studentExamResultsPage.height * 0.98}"
+      prefWidth="${studentExamResultsPage.width}">
+      <columns>
+        <TableColumn fx:id="idColumn" prefWidth="${studentExamResultsTable.width * 0.05}"
+          text="Id"/>
+        <TableColumn fx:id="studentNameColumn" prefWidth="${studentExamResultsTable.width * 0.795}"
+          text="Ім'я"/>
+        <TableColumn fx:id="scoreColumn" prefWidth="${studentExamResultsTable.width * 0.2}"
+          text="Результат"/>
+      </columns>
+    </TableView>
+  </children>
+</VBox>

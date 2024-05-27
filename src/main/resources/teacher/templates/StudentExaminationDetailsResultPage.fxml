@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<VBox prefHeight="500" prefWidth="800" xmlns="http://javafx.com/javafx/8"
+  fx:id="examStudentResultDetailPage"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.mdemydovych.nadiya.desktop.teacher.controller.StudentExaminationDetailsResultPageController">
+  <children>
+    <TableView fx:id="examStudentResultDetailTable"
+      prefHeight="${examStudentResultDetailPage.height * 0.98}"
+      prefWidth="${examStudentResultDetailPage.width}">
+      <columns>
+        <TableColumn fx:id="questionColumn"
+          prefWidth="${examStudentResultDetailTable.width * 0.795}"
+          text="Питання"/>
+        <TableColumn fx:id="answerColumn" prefWidth="${examStudentResultDetailTable.width * 0.2}"
+          text="Відповідь"/>
+      </columns>
+    </TableView>
+  </children>
+</VBox>

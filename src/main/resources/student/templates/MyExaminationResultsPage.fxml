@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+  fx:id="myExaminationsResultPage"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="com.mdemydovych.nadiya.desktop.student.controller.MyExaminationResultsController"
+  maxHeight="Infinity" maxWidth="Infinity"
+  prefHeight="${myExaminationsResultPage.parent.height}"
+  prefWidth="${myExaminationsResultPage.parent.width}">
+
+  <TextField fx:id="searchField" promptText="Search..."/>
+  <TableView fx:id="examResultsTable" prefHeight="${myExaminationsResultPage.height * 0.98}"
+    prefWidth="${myExaminationsResultPage.width}">
+    <columns>
+      <TableColumn fx:id="idColumn" prefWidth="${examResultsTable.width * 0.05}" text="id"/>
+      <TableColumn fx:id="teacherColumn" prefWidth="${examResultsTable.width * 0.3}" text="Вчитель"/>
+      <TableColumn fx:id="nameColumn" prefWidth="${examResultsTable.width * 0.3}" text="Назва"/>
+      <TableColumn fx:id="scoreColumn" prefWidth="${examResultsTable.width * 0.395}" text="Результат"/>
+    </columns>
+  </TableView>
+</VBox>

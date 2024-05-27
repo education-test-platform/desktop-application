@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:id="teacherPage" maxHeight="Infinity" maxWidth="Infinity"
+  prefHeight="${teacherPage.parent.height}" prefWidth="${teacherPage.parent.width}"
+  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.mdemydovych.nadiya.desktop.student.controller.TeachersPageController">
+  <children>
+    <TextField fx:id="searchField" promptText="Search..."/>
+    <TableView fx:id="teachersTable" prefHeight="${teacherPage.height * 0.98}"
+      prefWidth="${teacherPage.width}">
+      <columns>
+        <TableColumn fx:id="idColumn" prefWidth="${teachersTable.width * 0.05}" text="Id"/>
+        <TableColumn fx:id="nameColumn" prefWidth="${teachersTable.width * 0.395}" text="Ім'я"/>
+        <TableColumn fx:id="mailColumn" prefWidth="${teachersTable.width * 0.7}" text="Пошта"/>
+      </columns>
+    </TableView>
+  </children>
+</VBox>

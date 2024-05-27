@@ -1,0 +1,8 @@
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+<AnchorPane fx:id="authPage"
+  xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1"
+  prefHeight="600" prefWidth="800"
+  fx:controller="com.mdemydovych.nadiya.desktop.controller.LoginPageController">
+  <WebView fx:id="webView"/>
+</AnchorPane>

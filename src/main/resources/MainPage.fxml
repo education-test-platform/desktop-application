@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:id="homepage" xmlns="http://javafx.com/javafx/13"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.mdemydovych.nadiya.desktop.controller.MainPageController">
+  <MenuBar VBox.vgrow="NEVER">
+    <Menu mnemonicParsing="false" text="Main">
+      <MenuItem fx:id="teacherPage" mnemonicParsing="false" text="Всі вчителі"/>
+      <MenuItem fx:id="myTeachersPage" mnemonicParsing="false" text="Мої вчителі"/>
+      <MenuItem fx:id="examinationsPage" mnemonicParsing="false" text="Екзамени"/>
+      <MenuItem fx:id="myExamResultsPage" mnemonicParsing="false" text="Результати екзаменів"/>
+      <MenuItem fx:id="examCreatorPage" mnemonicParsing="false" text="Створити екзамен"/>
+      <MenuItem fx:id="myStudentsPage" mnemonicParsing="false" text="Мої студенти"/>
+      <MenuItem fx:id="myExamsPage" mnemonicParsing="false" text="Мої екзамени"/>
+    </Menu>
+  </MenuBar>
+  <AnchorPane fx:id="workStation" VBox.vgrow="ALWAYS"/>
+</VBox>

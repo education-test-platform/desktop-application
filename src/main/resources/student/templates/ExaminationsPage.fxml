@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:id="examinationsPage" maxHeight="Infinity" maxWidth="Infinity"
+  prefHeight="${examinationsPage.parent.height}" prefWidth="${examinationsPage.parent.width}"
+  xmlns="http://javafx.com/javafx/13"
+  fx:controller="com.mdemydovych.nadiya.desktop.student.controller.ExaminationsPageController"
+  xmlns:fx="http://javafx.com/fxml/1">
+
+  <TableView fx:id="examinationsTable" prefHeight="${examinationsPage.height * 0.98}"
+    prefWidth="${examinationsPage.width}">
+    <columns>
+      <TableColumn fx:id="idColumn" prefWidth="${examinationsTable.width * 0.05}" text="Назва"/>
+      <TableColumn fx:id="nameColumn" prefWidth="${examinationsTable.width * 0.395}" text="Назва"/>
+      <TableColumn fx:id="teacherNameColumn" prefWidth="${examinationsTable.width * 0.6}"
+        text="Викладач"/>
+    </columns>
+  </TableView>
+</VBox>

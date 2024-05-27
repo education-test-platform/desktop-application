@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<VBox fx:id="variantsCard" maxHeight="Infinity" maxWidth="Infinity"
+  prefHeight="400" prefWidth="600"
+  xmlns="http://javafx.com/javafx/8"
+  fx:controller="com.mdemydovych.nadiya.desktop.teacher.controller.VariantsCardController"
+  xmlns:fx="http://javafx.com/fxml/1">
+  <TableView fx:id="variantsTable" editable="true" prefHeight="200.0" prefWidth="200.0">
+    <columns>
+      <TableColumn fx:id="descriptionColumn" prefWidth="${variantsTable.width * 0.5}" text="Текст"/>
+      <TableColumn fx:id="correctedColumn" prefWidth="${variantsTable.width * 0.5}"
+        text="Відповідь"/>
+    </columns>
+  </TableView>
+  <Button fx:id="variantAddButton">Додати варіант</Button>
+  <Button fx:id="saveButton">Зберегти</Button>
+</VBox>
