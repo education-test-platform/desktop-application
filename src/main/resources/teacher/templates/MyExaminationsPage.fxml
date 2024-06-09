@@ -14,7 +14,8 @@
   <TableView fx:id="examResultsTable">
     <columns>
       <TableColumn fx:id="idColumn" prefWidth="${examResultsTable.width * 0.05}" text="Id"/>
-      <TableColumn fx:id="nameColumn" prefWidth="${examResultsTable.width * 0.95}" text="Назва"/>
+      <TableColumn fx:id="nameColumn" prefWidth="${examResultsTable.width * 0.7}" text="Назва"/>
+      <TableColumn fx:id="actionColumn" prefWidth="${examResultsTable.width * 0.295}" text="Дія"/>
     </columns>
   </TableView>
 </VBox>

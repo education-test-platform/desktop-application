@@ -1,12 +1,16 @@
 package com.mdemydovych.nadiya.desktop.teacher.controller;
 
 import com.mdemydovych.nadiya.desktop.service.CommonOperation;
+import com.mdemydovych.nadiya.desktop.teacher.cell.ButtonCell;
 import com.mdemydovych.nadiya.desktop.teacher.service.TeacherService;
 import com.mdemydovych.nadiya.desktop.utils.ApplicationPageTitles;
 import com.mdemydovych.nadiya.model.examination.core.ExaminationPreview;
 import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -40,6 +44,10 @@ public class MyExaminationsPageController {
   private TableColumn<ExaminationPreview, String> nameColumn;
 
   @FXML
+  private TableColumn<ExaminationPreview, String> actionColumn;
+
+
+  @FXML
   private TextField searchField;
 
   @FXML
@@ -47,6 +55,8 @@ public class MyExaminationsPageController {
     idColumn.setCellValueFactory(
         p -> new ReadOnlyObjectWrapper<>(examResultsTable.getItems().indexOf(p.getValue()) + 1));
     nameColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+    actionColumn.setCellFactory(
+        col -> new ButtonCell<>(actionButtonEvent(), buttonCustomization()));
     commonOperation.addDoubleClickEvent(examResultsTable,
         preview -> {
           resultsPageController.setExamId(preview.getId());
@@ -55,6 +65,28 @@ public class MyExaminationsPageController {
               }, Modality.APPLICATION_MODAL);
         });
     fillTable();
+  }
+
+  private Consumer<ExaminationPreview> actionButtonEvent() {
+    return examinationPreview -> {
+      teacherService.meChangeExamStatus(examinationPreview.getId());
+      refreshTable();
+    };
+  }
+
+  private BiConsumer<Button, ExaminationPreview> buttonCustomization() {
+    return (button, examination) -> {
+      if (examination.isEnabled()) {
+        button.setText("Деактивувати");
+        return;
+      }
+      button.setText("Активувати");
+    };
+  }
+
+  private void refreshTable() {
+    fillTable();
+    examResultsTable.refresh();
   }
 
   private void fillTable() {

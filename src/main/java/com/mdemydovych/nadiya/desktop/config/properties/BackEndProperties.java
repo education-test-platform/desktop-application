@@ -30,4 +30,6 @@ public class BackEndProperties {
   private String myExamsPath = "/backend/teacher/my/examinations";
 
   private String findAllExamResultsPath = "/backend/examination/result/find/{examId}";
+
+  private String meChangeExamStatus = "/backend/teacher/me/change/exam/status/{examId}";
 }

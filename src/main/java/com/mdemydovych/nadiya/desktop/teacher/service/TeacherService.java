@@ -32,4 +32,9 @@ public class TeacherService {
     executorService.request(properties.getMeSaveExamination(),
         HttpMethod.POST, examination, Void.class);
   }
+
+  public void meChangeExamStatus(String examId) {
+    executorService.request(properties.getMeChangeExamStatus(),
+        HttpMethod.POST, null, Void.class, examId);
+  }
 }

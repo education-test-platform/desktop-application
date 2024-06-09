@@ -107,6 +107,7 @@ public class ExaminationCreatorPageController {
     ExaminationDto examination = new ExaminationDto();
     examination.setTitle(examNameField.getText());
     examination.setQuestions(buildQuestions());
+    examination.setEnabled(false);
     return examination;
   }
 
